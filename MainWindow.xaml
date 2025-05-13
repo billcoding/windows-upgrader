@@ -1,0 +1,46 @@
+﻿<Window x:Class="Upgrader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="App Upgrader" Height="100" Width="400"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Topmost="False" ShowActivated="True" ShowInTaskbar="False"
+        MouseDown="Window_MouseDown" MouseMove="Window_MouseMove" Background="Transparent" AllowsTransparency="True">
+
+    <!-- Window Resources -->
+    <Window.Resources>
+        <LinearGradientBrush x:Key="WindowGradient" StartPoint="0,0" EndPoint="1,1" >
+            <GradientStop Color="#FF81D4FA" Offset="0"/>
+            <!-- Lighter Blue -->
+            <GradientStop Color="#FFB3E5FC" Offset="1"/>
+            <!-- Very Light Blue -->
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <!-- Outer Border to highlight the absence of title bar -->
+    <Border BorderBrush="#FF64B5F6" BorderThickness="2" Margin="0" CornerRadius="15" Background="{StaticResource WindowGradient}">
+        <Grid>
+
+            <!-- TextBlock for displaying download status -->
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontWeight="Bold" FontSize="14" Foreground="White">
+                Downloading the update file, please wait...
+            </TextBlock>
+
+            <!-- Grid to hold the ProgressBar and the percentage TextBlock on the same line -->
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,40,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- ProgressBar for download progress -->
+                <ProgressBar x:Name="DownloadProgressBar" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="25" 
+                             Grid.Column="0" Minimum="0" Maximum="100" IsIndeterminate="False" Foreground="#FF64B5F6" Background="#E1F5FE" />
+
+                <!-- TextBlock for displaying the percentage -->
+                <TextBlock x:Name="DownloadTextBlock" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontSize="14" 
+                           Grid.Column="1" Text="0%" Foreground="White"/>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>

@@ -1,0 +1,55 @@
+# User-specific files
+.idea/
+.vscode/
+.vs/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer Logs
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer Logs
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer Files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]evelopment/
+[Dd]ebugTest/
+[Dd]ebug builds/
+[Dd]ebuggers/
+[Dd]ebugSymbols/
+[Dd]ebugItems/
+
+# Windows Installer Logs
+*.cab
+*.msi
+*.msm
+*.msp
+### NuGet
+packages/
+.nuget/
+# Windows Installer Files
+*.cab
+*.msi
+*.msm
+
+*.csproj.user
+bin/
+obj/
